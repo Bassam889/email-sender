@@ -10,7 +10,6 @@ import (
 )
 
 func sendEmail(name, email, phone, message string) error {
-
 	usernameEmail := os.Getenv("EMAIL")
 	passwordEmail := os.Getenv("PASSWORD")
 

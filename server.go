@@ -33,6 +33,9 @@ func main() {
 	}))
 
 	port := os.Getenv("PORT")
+	if os.Getenv("PORT") == "" {
+		port = ":3000"
+	}
 	routes.SetupRoutes(app)
 	// app.Use(cors.New())
 	app.Listen(port)
